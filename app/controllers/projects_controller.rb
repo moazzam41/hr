@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
   layout "projects_layout"
   before_action :set_project, except: [:create]
   before_action :project_statuses_count, only: [:index, :complete, :overdue]
-
+  before_action :require_manager_login
+  
   ## STANDARD RESTFUL ACTIONS
 
   def index
@@ -20,7 +21,7 @@ class ProjectsController < ApplicationController
     @project = Project.new
     @project.notes.build
   end
-
+ 
   def create
     @project = Project.new(project_params)
     if @project.save

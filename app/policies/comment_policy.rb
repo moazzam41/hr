@@ -13,6 +13,6 @@ class CommentPolicy < ApplicationPolicy
 
   private 
   def admin_owner_check
-    user.admin? || comment_project_owner? || task_owner? || record_owner?
+    user.manager? || comment_project_owner? || task_owner? || record_owner?
   end
 end

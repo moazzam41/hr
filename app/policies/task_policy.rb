@@ -1,6 +1,6 @@
 class TaskPolicy < ApplicationPolicy
   def index?
-    user.admin? || project_owner? || !find_user_project.nil?
+    user.manager? || project_owner? || !find_user_project.nil?
   end
 
   def new?
@@ -29,7 +29,7 @@ class TaskPolicy < ApplicationPolicy
 
   private
   def admin_owner_check
-    user.admin? || project_owner? || record_owner?
+    user.manager? || project_owner? || record_owner?
   end
 
   def collaborator_permission_check

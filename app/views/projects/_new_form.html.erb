@@ -15,6 +15,8 @@
     <%= f.label :collaborators, "Collaborators (Email address, comma seperated)" %>
       <%= f.text_field :collaborator_emails, class: "form-control"%>
   </div>
+
+
   <div class="form-group">
   <%= f.label :notes, "Add a note", class: "control-label"%><br/>
     <%= f.fields_for :notes do |note_field| %>

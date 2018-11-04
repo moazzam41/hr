@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   layout "notes_layout"
   before_action :set_project, except: [:show, :edit]
   before_action :set_note, except: [:index, :new, :create]
-
+    
    ## STANDARD RESTFUL ROUTES
 
   def index

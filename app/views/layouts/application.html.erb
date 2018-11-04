@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rails PM</title>
+    <title>Digicon Valley</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <%= render "navs/nav_base"%>
@@ -18,7 +21,7 @@
         <% elsif params[:controller] == "devise/passwords" %>
           <h1>Reset Password</h1>
         <% else %>
-          <h1>Rails PM</h1>
+          <h1>Digicon Valley</h1>
         <% end %>
       </div>
     </div>

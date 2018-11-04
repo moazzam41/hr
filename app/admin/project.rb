@@ -1,18 +1,31 @@
 ActiveAdmin.register Project do
-permit_params :name, :description
-  actions :all, except: [:destroy]
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+permit_params :name, :description, :owner, :due_date, :status
+  actions :all
+  menu priority: 3
 
+index do
+    selectable_column
+    id_column
+    column :name
+    column :description
+    column :manager ,:owner
+    column :due_date
+    column :status
+    actions
+  end
+
+
+  filter :name
+
+  form do |f|
+    f.inputs "Admin Details" do
+      f.input :name
+      f.input :description
+      f.input :owner
+      f.input :due_date
+      f.input :status
+    end
+    f.actions
+  end
 
 end

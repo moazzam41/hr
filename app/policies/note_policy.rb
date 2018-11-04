@@ -25,7 +25,7 @@ class NotePolicy < ApplicationPolicy
 
   private
   def admin_owner_check
-    user.admin? || project_owner? || record_owner?
+    user.manager? || project_owner? || record_owner?
   end
 
   def collaborator_permission_check

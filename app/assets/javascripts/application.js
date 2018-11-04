@@ -15,7 +15,10 @@
 //= require bootstrap-sprockets
 //= require handlebars-v4.0.5
 //= require_tree
-
+//= require jquery-3.3.1.min.js
+//= require popper.min.js
+//= require bootstrap.min.js
+//= require mdb.min.js
 
 $(document).ready(function(){
   

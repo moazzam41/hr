@@ -12,14 +12,18 @@
   <% if task.assigned_users.include?(current_user) %>
     <p class="collaborator-text"> Assigned to you </p>
   <% end %>
+  <% if current_user.manager? %>
   <p> <%= link_to "#{task.comments.count} Comments", task_path(task) %> </p>
   <p> Belongs to: <%= link_to task.project.name, project_path(task.project) %> </p>
+  <% end %>
   <div class="inline-button">
     <%= link_to "View task", task_path(task), class: "btn btn-default" %>
   </div>
+  <% if current_user.manager? %>
   <div class="inline-button">
     <%= link_to "Edit task", edit_task_path(task), class: "btn btn-default" %>
   </div>
+  <% end %>
   <div class="inline-button">
     <%= render partial: "task_complete_form", locals: {task: task} unless task.status == "complete" %>
   </div>

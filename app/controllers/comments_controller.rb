@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit, :update, :show, :destroy]
   before_action :set_task, only: [:edit, :update, :destroy]
   before_action :set_project
-  
+    
   ## STANDARD RESTFUL ROUTES
 
   def index

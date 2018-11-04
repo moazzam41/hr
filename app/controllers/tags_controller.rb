@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:update, :destroy]
-
+  before_action :require_manager_login
   ## STANDARD RESTFUL ACTIONS
 
   def index

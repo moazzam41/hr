@@ -22,7 +22,7 @@ class ProjectPolicy < ApplicationPolicy
 
   private
   def admin_owner_check
-    user.admin? || record_owner?
+    user.manager? || record_owner?
   end
 
   def collaborator_permission_check

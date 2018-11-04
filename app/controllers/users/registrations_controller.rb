@@ -5,7 +5,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def edit
-    if current_user.admin?
+    if current_user.manager?
       if params[:format]
         @user = User.find_by(id: params[:format].to_i)
       else
