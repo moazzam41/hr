@@ -16,4 +16,4 @@
 # @note = Note.create(user_id: 1, project_id: 1, title: "Watch out for climbers", content: "If the climbers start to come up the wall, drop the scythe on them. That should hold them off, for a little while anyways.")
 # @project.collaborators << [@ollie]
 
-AdminUser.create!(email: 'Moazzam@gmail.com', password: '123456', password_confirmation: '123456')
+AdminUser.create!(email: 'sirmoazzam41@gmail.com', password: 'moazzam41', password_confirmation: 'moazzam41')
