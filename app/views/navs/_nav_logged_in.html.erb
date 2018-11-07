@@ -14,7 +14,7 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Tasks
                 </a>
                 <div class="dropdown-menu dropdown-green" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item waves-effect waves-light" href="/tasks">Your Tasks</a>
+                  <a class="dropdown-item waves-effect waves-light" href="/tasks/all">Your Tasks</a>
                   <a class="dropdown-item waves-effect waves-light" href="/tasks/new">New Task</a>
                 </div>
               </li>
@@ -24,13 +24,13 @@
                 <a class="nav-link waves-effect waves-light" href="/tags">Tags</a>
               </li>
 <% end %>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 
-              <li class="nav-item">
-                <button class="btn btn-sm btn-danger hoverable" style=""><%= link_to "Logout", destroy_user_session_path, method: :delete , :style => 'color:#fff!important;' %></button>
-              </li>
 
               <li class="nav-item">
                 <a  class="nav-link waves-effect waves-light" href="<%= profile_path %>" id="email"><%= image_tag @user.avatar.url(:icon), id: "profile-icon" if @user.avatar_file_name != nil %><%= current_user.email %></a>
               </li>
-
-
+&nbsp;&nbsp;
+              <li class="nav-item">
+                <button class="btn btn-sm btn-danger hoverable" style=""><%= link_to "Logout", destroy_user_session_path, method: :delete , :style => 'color:#fff!important;' %></button>
+              </li>

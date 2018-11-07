@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap-sprockets
+// = require jquery
+// = require jquery_ujs
+// require bootstrap-sprockets
 //= require handlebars-v4.0.5
 //= require_tree
 //= require jquery-3.3.1.min.js
